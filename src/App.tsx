@@ -1,8 +1,11 @@
+import { Routes, Route } from 'react-router-dom';
+import Main from 'pages/Main/Main';
+
 function App(): JSX.Element {
 	return (
-		<div className="App">
-			<header className="App-header">Learn React</header>
-		</div>
+		<Routes>
+			<Route path="/" element={<Main />} />
+		</Routes>
 	);
 }
 
