@@ -61,7 +61,7 @@ const Container = styled.div`
 
 const DropDownMenuContainer = styled.div`
 	${tw`
-	relative
+		relative
     top-20
 		right-10
 		w-44
@@ -70,6 +70,7 @@ const DropDownMenuContainer = styled.div`
     p-4
     rounded
     shadow-xl
+		z-50
   `}
 	ul {
 		${tw`
