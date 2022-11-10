@@ -1,7 +1,5 @@
-import Navbar from 'components/Navbar/Navbar';
-
 const Main = () => {
-	return <Navbar />;
+	return <div>ho</div>;
 };
 
 export default Main;

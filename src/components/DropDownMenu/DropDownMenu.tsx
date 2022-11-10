@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import tw from 'twin.macro';
 interface IProps {
@@ -29,9 +30,15 @@ const DropDownMenu = ({ handleIsProfileClick }: IProps) => {
 		<Container>
 			<DropDownMenuContainer ref={dropDownMenuModalRef}>
 				<ul>
-					<li>내 작성글</li>
-					<li>설정</li>
-					<li>로그아웃</li>
+					<Link to="/mywrite" onClick={handleIsProfileClick}>
+						내 작성글
+					</Link>
+					<Link to="/mypage" onClick={handleIsProfileClick}>
+						설정
+					</Link>
+					<Link to="/logout" onClick={handleIsProfileClick}>
+						로그아웃
+					</Link>
 				</ul>
 			</DropDownMenuContainer>
 		</Container>
@@ -64,11 +71,16 @@ const DropDownMenuContainer = styled.div`
     rounded
     shadow-xl
   `}
-
-	li {
+	ul {
 		${tw`
-      mb-4
-			cursor-pointer
-    `}
+			flex
+			flex-col
+		`}
+		a {
+			${tw`
+				mb-4
+				cursor-pointer
+			`}
+		}
 	}
 `;
