@@ -40,7 +40,7 @@ const Navbar = () => {
 							<Link to="/write">새 글 쓰기</Link>
 							<HiOutlineBellAlert className="alert-message" />
 							<div onClick={handleIsProfileClick}>프로필</div>
-							{isProfileClick && <DropDownMenu />}
+							{isProfileClick && <DropDownMenu handleIsProfileClick={handleIsProfileClick} />}
 						</>
 					) : (
 						<>
@@ -53,6 +53,8 @@ const Navbar = () => {
 		</>
 	);
 };
+
+export default Navbar;
 
 const NavigationBar = styled.nav`
 	${tw`
@@ -79,11 +81,10 @@ const NavbarLoginElementWrapper = styled.div`
 			[&>:nth-child(1)]:mr-7
 			font-extrabold
 			text-xl
+			cursor-pointer
 		`}
 		.alert-message {
 			${tw`
 				mr-7
 			`}
 `;
-
-export default Navbar;
