@@ -62,7 +62,7 @@ const NavigationBar = styled.nav`
 			justify-between
 			items-center
 			px-5
-			py-4
+			py-6
 		`}
 `;
 

@@ -1,5 +1,11 @@
+import BannerSlide from 'components/BannerSlide/BannerSlide';
+
 const Main = () => {
-	return <div>ho</div>;
+	return (
+		<div>
+			<BannerSlide />
+		</div>
+	);
 };
 
 export default Main;
